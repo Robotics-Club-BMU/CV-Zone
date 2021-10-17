@@ -15,6 +15,8 @@ def main():
         image = display_large_images(image)
     cv.imshow("Cat", image)
     cv.waitKey(0)
+    
+    cv.imwrite("output.jpg", image)
 
 
 if __name__ == "__main__":
