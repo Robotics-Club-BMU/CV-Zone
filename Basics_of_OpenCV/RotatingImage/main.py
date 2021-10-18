@@ -17,11 +17,23 @@ def main():
 
     cv.imshow("Orignal Image", image)
     
-    rotated = rotate(image, 90)
-    cv.imshow("Rotated Image by 90 degrees", rotated)
+    rotated_1 = rotate(image, 90)
+    cv.imshow("Rotated Image by 90 degrees", rotated_1)
+
+    rotated_2 = rotate(image, 47)
+    cv.imshow("Rotated Image by 47 degrees", rotated_2)
+
+    rotated_3 = rotate(image, 120)
+    cv.imshow("Rotated Image by 120 degrees", rotated_3)
+
+    rotated_4 = rotate(image, 60)
+    cv.imshow("Rotated Image by 60 degrees", rotated_4)
 
     cv.waitKey(0)
     cv.destroyAllWindows()
-    cv.imwrite("rotated.jpg", rotated)
+    cv.imwrite("rotated_1.jpg", rotated_1)
+    cv.imwrite("rotated_2.jpg", rotated_2)
+    cv.imwrite("rotated_3.jpg", rotated_3)
+    cv.imwrite("rotated_4.jpg", rotated_4)
 
 main()
