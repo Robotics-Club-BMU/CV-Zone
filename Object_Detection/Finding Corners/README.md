@@ -1,4 +1,4 @@
-# Fincing Corners 
+# Finding Corners 
 * This code can find corners in an image using open cv
 * You can [click here](https://github.com/tb-rules10/CV-Zone/blob/branch-2/Object_Detection/Finding%20Corners/Code.py) for code explanation as i have added comments all over the program
 * All the corners in the output image are marked by red dots
