@@ -2,54 +2,35 @@
 # method for line detection
 import cv2
 import numpy as np
-
-# Reading the required image in
-# which operations are to be done.
-# Make sure that the image is in the same
-# directory in which this python program is
 img = cv2.imread('lines.jpg')
+gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
-# Convert the img to grayscale
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+kernel_size = 5
+blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size),0)
 
-# Apply edge detection method on the image
-edges = cv2.Canny(gray, 50, 150, apertureSize=3)
+low_threshold = 50
+high_threshold = 150
+edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 
-# This returns an array of r and theta values
-lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
+rho = 1  # distance resolution in pixels of the Hough grid
+theta = np.pi / 180  # angular resolution in radians of the Hough grid
+threshold = 15  # minimum number of votes (intersections in Hough grid cell)
+min_line_length = 50  # minimum number of pixels making up a line
+max_line_gap = 20  # maximum gap in pixels between connectable line segments
+line_image = np.copy(img) * 0  # creating a blank to draw lines on
 
-# The below for loop runs till r and theta values
-# are in the range of the 2d array
-for r, theta in lines[0]:
-    # Stores the value of cos(theta) in a
-    a = np.cos(theta)
+# Run Hough on edge detected image
+# Output "lines" is an array containing endpoints of detected line segments
+lines = cv2.HoughLinesP(edges, rho, theta, threshold, np.array([]),
+                    min_line_length, max_line_gap)
 
-    # Stores the value of sin(theta) in b
-    b = np.sin(theta)
+for line in lines:
+    for x1,y1,x2,y2 in line:
+      cv2.line(line_image,(x1,y1),(x2,y2),(255,0,0),5)
 
-    # x0 stores the value rcos(theta)
-    x0 = a * r
+lines_edges = cv2.addWeighted(img, 0.8, line_image, 1, 0)
 
-    # y0 stores the value rsin(theta)
-    y0 = b * r
 
-    # x1 stores the rounded off value of (rcos(theta)-1000sin(theta))
-    x1 = int(x0 + 1000 * (-b))
-
-    # y1 stores the rounded off value of (rsin(theta)+1000cos(theta))
-    y1 = int(y0 + 1000 * (a))
-
-    # x2 stores the rounded off value of (rcos(theta)+1000sin(theta))
-    x2 = int(x0 - 1000 * (-b))
-
-    # y2 stores the rounded off value of (rsin(theta)-1000cos(theta))
-    y2 = int(y0 - 1000 * (a))
-
-    # cv2.line draws a line in img from the point(x1,y1) to (x2,y2).
-    # (0,0,255) denotes the colour of the line to be
-    # drawn. In this case, it is red.
-    cv2.line(img, (x1, y1), (x2, y2), (0, 0, 255), 2)
-
-# All the changes made in the input image are finally
-# written on a new image houghlines.jpg
-cv2.imwrite('linesDetected.jpg', img)
+cv2.imshow("Image", lines_edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
