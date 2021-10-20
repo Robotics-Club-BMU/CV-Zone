@@ -1,4 +1,4 @@
-# Live Sketch Using Webcam
+# Drawing a Triangle
 
 * By using this code we can draw a triangle with a centroid.
 * The triangle is drawn with blue colour and it's centroid is marked by a red circle.
