@@ -12,7 +12,7 @@ img = cv2.imread('noise1.jpg')
 dst = cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 15)
 
 # Plotting of source and destination image
-plt.subplot(121), plt.imshow(img)
-plt.subplot(122), plt.imshow(dst)
+plt.subplot(121), plt.title('Input Image'),  plt.imshow(img)
+plt.subplot(122), plt.title('Output Image'), plt.imshow(dst)
 
 plt.show()
