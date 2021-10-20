@@ -18,6 +18,8 @@ OpenCV is written in C++ and its primary interface is in C++, but it still retai
 * Create a pull request mentioning the issue number
 * Issue is reviewed and merged🎉.
 
+# Table of Contents
+
 Sr. No.                    |   Name               
 :-------------------------:|:-------------------------:|
 **1.**                 | [**Basics of Open CV**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV)                        
