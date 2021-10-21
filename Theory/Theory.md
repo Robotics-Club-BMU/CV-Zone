@@ -1,1 +1,0 @@
-# Theory Related to OpenCV
