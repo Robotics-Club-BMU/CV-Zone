@@ -21,6 +21,6 @@ Sr. No.             |   Name
 **7.**              | [**Refining an Image**](https://github.com/tb-rules10/CV-Zone/tree/main/Image_Manipulations/Refining%20an%20Image)  
 **8.**              | [**Sharpening an Image**](https://github.com/tb-rules10/CV-Zone/tree/main/Image_Manipulations/Sharpening%20an%20Image)  
 **9.**              | [**Image Thresholding**](https://github.com/tb-rules10/CV-Zone/tree/main/Image_Manipulations/image_thresholding)  
-**10.**             | [****]()  
+**10.**             | [**Image Restoration**](https://github.com/tb-rules10/CV-Zone/tree/restore/Image_Manipulations/Image%20Restoration)  
 **11.**             | [****]()  
 **12.**             | [****]()  
