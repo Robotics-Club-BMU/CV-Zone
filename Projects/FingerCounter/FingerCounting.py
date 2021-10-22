@@ -13,27 +13,29 @@ def main():
     while True:
         success, image = cap.read() 
         image = detector.find_hands(image)
-        hand_landmarks = detector.find_pos(image)
+        hand_1_landmarks = detector.find_pos(image, hand_num=0)
+        hand_2_landmarks = detector.find_pos(image, hand_num=1)
 
         fingers_count = 0
-        if len(hand_landmarks):
-            fingers = []
+        for hand_landmarks in [hand_1_landmarks, hand_2_landmarks]:
+            if len(hand_landmarks):
+                fingers = []
 
-            # For thumb
-            if hand_landmarks[TIPS_ID[0]][1] > hand_landmarks[TIPS_ID[0]-1][1]:
-                fingers.append(1)
-            else:
-                fingers.append(0)
-
-            #Loopoing over every finger
-            for i in range(1, 5):    
-                # Hand landmarks for ith finger
-                if hand_landmarks[TIPS_ID[i]][2] < hand_landmarks[TIPS_ID[i]-2][2]:
+                # For thumb
+                if hand_landmarks[TIPS_ID[0]][1] > hand_landmarks[TIPS_ID[0]-1][1]:
                     fingers.append(1)
                 else:
                     fingers.append(0)
 
-            fingers_count += fingers.count(1)
+                #Loopoing over every finger
+                for i in range(1, 5):    
+                    # Hand landmarks for ith finger
+                    if hand_landmarks[TIPS_ID[i]][2] < hand_landmarks[TIPS_ID[i]-2][2]:
+                        fingers.append(1)
+                    else:
+                        fingers.append(0)
+
+                fingers_count += fingers.count(1)
 
         c_time = time.time()
         fps = 1/(c_time-p_time)
@@ -42,9 +44,10 @@ def main():
         cv.putText(image, str(int(fps)), (10, 70),
                 cv.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
 
-        cv.rectangle(image, (20, 225), (170, 425), (0, 255, 0), cv.FILLED)
-        cv.putText(image, str(fingers_count), (45, 375),
-                cv.FONT_HERSHEY_PLAIN, 10, (255, 0, 0), 25)
+        if fingers_count:
+            cv.rectangle(image, (20, 225), (170, 425), (0, 255, 0), cv.FILLED)
+            cv.putText(image, str(fingers_count), (45, 375),
+                    cv.FONT_HERSHEY_PLAIN, 10, (255, 0, 0), 25)
 
         cv.imshow("Counting Fingers", image)
         if cv.waitKey(5) & 0xFF == 27:
