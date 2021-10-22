@@ -16,12 +16,13 @@ image classification, or simply want to tinker with your Raspberry Pi and add im
  
  Sr. No.                    |   Name               
 :-------------------------:|:-------------------------:|
-**1.**                 | [**Convert BGR and RGB**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Convert%20BGR%20and%20RGB)                        
-**2.**                 | [**Display-Multiple-Images-in-One-Window**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Display-Multiple-Images-in-One-Window)                   
-**3.**                 | [**Draw a Triangle**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Draw%20a%20Triangle)                    
-**4.**                 | [**Drawing-Images**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Drawing-Images)                    
-**5.**                 | [**Grayscalling**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Grayscalling)                        
-**6.**                 | [**Histogram**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Histogram)                            
-**7.**                 | [**Image Resizing**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Image%20Resizing)   
-**8.**                 | [**Reading-Writing-and-displaying-images**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/Reading-Writing-and-displaying-images)      
-**9.**                 | [**RotatingImage**](https://github.com/tb-rules10/CV-Zone/tree/read-me/Basics_of_OpenCV/RotatingImage)      
+**1.**                 | [**Convert BGR and RGB**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Convert%20BGR%20and%20RGB)                        
+**2.**                 | [**Display-Multiple-Images-in-One-Window**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Display-Multiple-Images-in-One-Window)                   
+**3.**                 | [**Draw a Triangle**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Draw%20a%20Triangle)                    
+**4.**                 | [**Drawing-Images**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Drawing-Images)                    
+**5.**                 | [**Grayscalling**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Grayscalling)                        
+**6.**                 | [**Histogram**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Histogram)                            
+**7.**                 | [**Image Resizing**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Image%20Resizing)   
+**8.**                 | [**Reading-Writing-and-displaying-images**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Reading-Writing-and-displaying-images)      
+**9.**                 | [**RotatingImage**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/RotatingImage)   
+**10.**                 | [****]()   
