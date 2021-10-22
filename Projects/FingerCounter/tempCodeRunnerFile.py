@@ -1,1 +1,1 @@
-self.results.multi_hand_landmarks
+hand_1_landmarks[-1]

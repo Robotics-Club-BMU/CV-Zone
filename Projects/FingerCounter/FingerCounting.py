@@ -22,10 +22,19 @@ def main():
                 fingers = []
 
                 # For thumb
-                if hand_landmarks[TIPS_ID[0]][1] > hand_landmarks[TIPS_ID[0]-1][1]:
-                    fingers.append(1)
+                # If hand is left
+                print(type(hand_landmarks[0][-1]))
+                print(hand_landmarks[0][-1])
+                if hand_landmarks[0][-1] == "Left":
+                    if hand_landmarks[TIPS_ID[0]][1] > hand_landmarks[TIPS_ID[0]-1][1]:
+                        fingers.append(1)
+                    else:
+                        fingers.append(0)
                 else:
-                    fingers.append(0)
+                    if hand_landmarks[TIPS_ID[0]][1] < hand_landmarks[TIPS_ID[0]-1][1]:
+                        fingers.append(1)
+                    else:
+                        fingers.append(0)
 
                 #Loopoing over every finger
                 for i in range(1, 5):    
