@@ -39,7 +39,7 @@ class HandDetector:
                 for ID, landmark in enumerate(current_hand.landmark):
                     h, w, c = image.shape 
                     cx, cy = int(landmark.x*w), int(landmark.y*h)
-                    landmark_list.append([ID, cx, cy])
+                    landmark_list.append([ID, cx, cy, self.results.multi_handedness[hand_num].classification[0].label])
         return landmark_list
 
         
@@ -64,7 +64,8 @@ def main():
                 cv.FONT_HERSHEY_COMPLEX, 3, (255, 0, 255), 3)
 
         cv.imshow("Hand Tracking", image)
-        cv.waitKey(1)
+        if cv.waitKey(5) & 0xFF == 27:
+            break
 
 if __name__ == "__main__":
     main()
