@@ -17,4 +17,4 @@ Sr. No.             |   Name
 **4.**              | [**Counting Circles & Ellipses**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Segmentation/Counting%20Circles%20%26%20Ellipses)  
 **5.**              | [**Line Detection**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Segmentation/Line%20Detection)  
 **6.**              | [**Morphological operations**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Segmentation/Morphological%20operations)  
-**7.**              | [****]()  
+**7.**              | [**Shape Detection**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Segmentation/ShapeDetection)  

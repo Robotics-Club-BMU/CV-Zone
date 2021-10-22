@@ -22,5 +22,5 @@ Sr. No.             |   Name
 **8.**              | [**Sharpening an Image**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Manipulations/Sharpening%20an%20Image)  
 **9.**              | [**Image Thresholding**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Manipulations/image_thresholding)  
 **10.**             | [**Image Restoration**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Manipulations/Image%20Restoration)  
-**11.**             | [****]()  
+**11.**             | [**Add Watermarks**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Image_Manipulations/Watermark)  
 **12.**             | [****]()  
