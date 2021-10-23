@@ -3,9 +3,20 @@ import HandTrackingModule as HTM
 import cv2 as cv
 import math
 import numpy as np
+import serial
 
 
+try:
+    arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+except:
+    arduino = None 
+    
+prev_percent = 0
 def set_brightness(percent: int):
+    if arduino:
+        arduino.write(f"C {percent}".encode())
+    else:
+        print("Arduino not connected!")
     print(f"Setting the brightness to {percent}")
 
 
@@ -21,6 +32,8 @@ p_time = 0
 detetctor = HTM.HandDetector()
 percent = 0
 vol_bar = 400
+one_time = True 
+prev_percent = 0
 while True:
     success, image = cap.read()
     image = detetctor.find_hands(image)
@@ -41,10 +54,20 @@ while True:
         # We need to map 30 to 250 to 0 to 100 for the percentage of the brightness of the LED
         percent = np.interp(length, [25, 245], [0, 100])
         vol_bar = np.interp(length, [25, 245], [400, 150])
-        set_brightness(percent)
 
-        if length < 60:
+        smoothness = 5
+        percent = smoothness * round(percent/smoothness)
+
+        #Now just check if the pinky is down or not, and if it's down, set the value!
+
+        if landmark_list[20][2] > landmark_list[18][2]:
+            one_time = True
+            prev_percent = percent
             cv.circle(image, (cx, cy), 15, (0, 255, 0), cv.FILLED)
+        else:
+            if one_time:
+                set_brightness(prev_percent)
+                one_time = False 
 
     cv.rectangle(image, (50, 150), (85, 400), (255, 0, 0), 3)
     cv.rectangle(image, (50, int(vol_bar)), (85, 400), (255, 0, 0), cv.FILLED)
