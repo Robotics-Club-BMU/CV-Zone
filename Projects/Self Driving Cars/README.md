@@ -8,6 +8,4 @@ Here's the [source code](https://github.com/Robotics-Club-BMU/CV-Zone/blob/main/
 
 <img src="https://github.com/tb-rules10/CV-Zone/blob/Self-Driving/Projects/Self%20Driving%20Cars/images/findingLanes.gif" width="900" height="500" />
 
-<img src="https://github.com/Robotics-Club-BMU/CV-Zone/blob/main/Projects/Self%20Driving%20Cars/images/findingLanes.gif" width="900" height="500" />
-
 [Check the full simulation video from here.](https://youtu.be/ZE7tO-ORsXM)
