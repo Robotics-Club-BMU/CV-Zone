@@ -16,5 +16,6 @@ Sr. No.             |   Name
 :------------------:|:-------------------------:|
 **1.**              | [**Vehicle Detection**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Object_Detection/Vehicle%20Detection)  
 **2.**              | [**Finding Corners**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Object_Detection/Finding%20Corners)  
-**3.**              | [****]()  
+**3.**              | [**Histogram of Oriented Gradients**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Object_Detection/Histogram%20of%20Oriented%20Gradients)  
 **4.**              | [****]()  
+**5.**              | [****]()  
