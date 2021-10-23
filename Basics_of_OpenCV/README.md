@@ -25,4 +25,6 @@ image classification, or simply want to tinker with your Raspberry Pi and add im
 **7.**                 | [**Image Resizing**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Image%20Resizing)   
 **8.**                 | [**Reading-Writing-and-displaying-images**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Reading-Writing-and-displaying-images)      
 **9.**                 | [**RotatingImage**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/RotatingImage)   
-**10.**                 | [****]()   
+**10.**                 | [**Capturing an Image**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Capturing%20an%20Image)  
+**11.**                 | [**Video Capturing**](https://github.com/Robotics-Club-BMU/CV-Zone/tree/main/Basics_of_OpenCV/Video%20Capturing)  
+**12.**                 | [****]()  
