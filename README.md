@@ -2,9 +2,11 @@
 
 ![CV-Zone](https://socialify.git.ci/Robotics-Club-BMU/CV-Zone/image?font=Inter&forks=1&issues=1&language=1&owner=1&stargazers=1&theme=Light)
 
-## Open CV
+## OpenCV
 
 OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in the commercial products. Being a BSD-licensed product, OpenCV makes it easy for businesses to utilize and modify the code.
+
+[Official OpenCV Docs](https://docs.opencv.org/4.x/)
 
 ## Programming Languages
 
